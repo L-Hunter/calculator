@@ -1,1 +1,31 @@
 /*hello css*/
+body {
+	margin: 0;
+}
+.calc-interface{
+	width: 50%;
+	margin: 0 auto;
+	border: 1px solid black;
+	display: flex;
+}
+.num-button{
+	height: 100px;
+	padding: 30px;
+	font-size: 18px;
+	text-align: center;
+	border: 1px solid gray;
+	margin-right: 0;
+}
+
+.col {
+	flex: 1;
+	margin: 0;
+}
+
+#display {
+	flex: 1;
+	height: 110px;
+	text-align: center;
+	padding: 30px;
+	font-size: 30px;
+}
