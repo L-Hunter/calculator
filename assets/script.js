@@ -30,7 +30,12 @@ function subtract(a,b){
 
 function display(x){
 	if (b){
-		refresh();
+		//refresh();
+		equation = "" + x;
+		calcDisplay.textContent = equation;
+		a = undefined;
+		b = undefined;
+		n = "" + x;
 	} else {
 		equation += x;
 		calcDisplay.textContent = equation;
