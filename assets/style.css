@@ -1,20 +1,44 @@
 /*hello css*/
 body {
 	margin: 0;
+	background-color: #00FBFB;
+	font-family: 'Metamorphous', cursive;
 }
-.calc-interface{
-	width: 50%;
+
+.calculator {
+	border: 2px solid #002724;
+	width: 30%;
 	margin: 0 auto;
-	border: 1px solid black;
+	margin-top: 50px;
+	box-shadow: 5px 5px 3px #888888;
+}
+
+.calc-interface{
+	border: 1px solid white;
 	display: flex;
 }
+
+.display-interface {
+	color: #002724;
+}
+
 .num-button{
-	height: 100px;
-	padding: 30px;
-	font-size: 18px;
+	height: 90px;
+	padding: 25px;
+	padding-top: 40px;
+	font-size: 26px;
 	text-align: center;
-	border: 1px solid gray;
+	border: 1px solid white;
 	margin-right: 0;
+	color: #FFFFFF;
+}
+
+.num-button:hover {
+	background-color: #007661;
+}
+
+.buttons {
+	background-color: #00A98B;
 }
 
 .col {
@@ -24,8 +48,31 @@ body {
 
 #display {
 	flex: 1;
-	height: 110px;
+	height: 60px;
 	text-align: center;
-	padding: 30px;
+	padding-top: 30px;
+	padding-left: 25px;
 	font-size: 30px;
+	background-color: #FFFFFF;
+}
+
+@media all and (max-width: 1190px) {
+
+	.calculator {
+		width: 50%;
+	}
+}
+
+@media all and (max-width: 720px) {
+
+	.calculator {
+		width: 80%;
+	}
+}
+
+@media all and (max-width: 450px) {
+
+	.calculator {
+		width: 95%;
+	}
 }

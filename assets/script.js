@@ -30,7 +30,7 @@ function subtract(a,b){
 
 function display(x){
 	if (b){
-		alert("Please clear for more calculations.")
+		refresh();
 	} else {
 		equation += x;
 		calcDisplay.textContent = equation;
@@ -55,16 +55,20 @@ function setB(){
 
 function calculate(){
 	setB();
-	if (op === "+"){
-		add(a,b);
-	} else if (op === "-"){
-		subtract(a,b);
-	} else if (op === "*"){
-		multiply(a,b);
-	} else if (op === "/"){
-		divide(a,b);
+	if (a && b){
+		if (op === "+"){
+			add(a,b);
+		} else if (op === "-"){
+			subtract(a,b);
+		} else if (op === "*"){
+			multiply(a,b);
+		} else if (op === "/"){
+			divide(a,b);
+		}
+		calcDisplay.textContent = answer;
+	} else {
+		calcDisplay.textContent = "Please enter a valid equation."
 	}
-	calcDisplay.textContent = answer;
 }
 
 function refresh(){
